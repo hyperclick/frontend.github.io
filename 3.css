@@ -1,0 +1,110 @@
+#flexboy {
+    display: flex;
+    align-items: baseline;
+    /* border: 1px solid; */
+}
+
+#pet {
+    background-image: url("pet.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 10px;
+    /* border: 1px solid; */
+    display: none;
+}
+
+#tree {
+    height: 200px;
+    width: 200px;
+    background-image: url("elka.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#flexboy:hover #tree {
+    display: none;
+}
+
+#click {
+    align-self: start;
+    display: none;
+}
+
+#horror {
+    align-self: center;
+    display: none;
+}
+
+#boy {
+    display: none;
+    height: 200px;
+    width: 200px;
+    background-image: url("boy.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 100;
+}
+
+#flexboy:hover #boy {
+    /* display: flexbox; */
+    display: block;
+}
+
+#flexboy:hover #pet {
+    display: block;
+}
+
+#flexboy:hover #click {
+    display: block;
+}
+
+#flexboy:hover {
+    transition: 2s;
+    /* transform: scale(1.2) */
+    /* transition: all 2s ease-in-out; */
+    /* transition-delay: 0.5s; */
+    transform: scale(1.2) translateX(10%) translateY(5%);
+}
+
+@keyframes kf {
+    0% {
+        transform: translateX(10px);
+    }
+    10% {
+        transform: translateX(-10px);
+    }
+    20% {
+        transform: translateX(10px);
+    }
+    30% {
+        transform: translateX(-10px);
+    }
+    40% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+}
+
+#flexboy:active #boy {
+    background-image: url("boy2.jpg");
+}
+
+#flexboy:active {
+    animation: kf 1s;
+}
+
+#flexboy:active #pet {
+    transition: 1s;
+    transform: translateY(-200px);
+}
+
+#flexboy:active #horror {
+    display: block;
+}
+
+#flexboy:active #click {
+    display: none;
+}
